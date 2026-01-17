@@ -69,18 +69,19 @@ Before running this application, make sure you have the following installed:
    
    Create a `.env` file in the root directory:
    ```env
-   MONGODB_URI=mongodb://localhost:27017/bagshop
    JWT_KEY=your_secret_jwt_key
    EXPRESS_SESSION_SECRET=your_session_secret_key
    NODE_ENV=development
    ```
+   
+   **Note:** The MongoDB URI is configured separately using the `config` package (see next step).
 
 4. **Configure MongoDB connection**
    
-   Create a `config/development.json` file:
+   The project uses the `config` npm package. Create a `config/development.json` file:
    ```json
    {
-     "MONGODB_URI": "mongodb://localhost:27017/bagshop"
+     "MONGODB_URI": "mongodb://localhost:27017/baggy-backend"
    }
    ```
 
@@ -120,7 +121,8 @@ Bag-shop/
 ├── config/
 │   ├── mongoose-conection.js    # MongoDB connection setup
 │   ├── multer-config.js         # File upload configuration
-│   └── keys.js                  # Configuration keys
+│   ├── keys.js                  # Configuration keys
+│   └── development.json         # Development environment config (not in repo)
 │
 ├── controllers/
 │   └── authController.js        # Authentication logic
