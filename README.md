@@ -81,9 +81,11 @@ Before running this application, make sure you have the following installed:
    The project uses the `config` npm package. Create a `config/development.json` file:
    ```json
    {
-     "MONGODB_URI": "mongodb://localhost:27017/baggy-backend"
+     "MONGODB_URI": "mongodb://localhost:27017/baggy-bcakend"
    }
    ```
+   
+   **Note:** The database name in the code is 'baggy-bcakend' (matches the codebase).
 
 5. **Start MongoDB**
    ```bash
