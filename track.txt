@@ -1,0 +1,42 @@
+Usermodel ---
+
+FullName - string 
+email - string 
+password - string 
+cart - array 
+isAdmin - boolean 
+orders - array
+contact - number
+
+
+
+ProductModel -
+image
+name
+price
+Discount 
+bgcolor
+panel color
+textcolor
+==========DONE========
+
+
+for power shell when using debug :
+$env:DEBUG="mongoose-connection,app" 
+ npm run dev
+
+ # enable only your namespace (match exactly: 'developement:mongoose')
+$env:DEBUG = 'developement:mongoose'
+node .   # or: npx nodemon app.js
+Remove-Item Env:DEBUG
+
+
+ to stop debug --
+ Remove-Item Env:DEBUG -ErrorAction SilentlyContinue
+
+
+for setting node_env = developemnet\
+$env:NODE_ENV = "development"
+npm run dev
+
+onsole.log(process.env.NODE_ENV); // should print "development"
